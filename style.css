@@ -1,0 +1,106 @@
+:root {
+    --primary: #6c5ce7;
+    --success: #00b894;
+    --danger: #ff7675;
+    --warning: #fdcb6e;
+    --glass: rgba(255, 255, 255, 0.85);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.main-container {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #2d3436;
+    margin-bottom: 10px;
+    line-height: 1;
+    text-shadow: 4px 4px 0 white;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #636e72;
+    margin-bottom: 40px;
+}
+
+/* Menu Grid Layout */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Card Style */
+.menu-card {
+    background: var(--glass);
+    text-decoration: none;
+    padding: 30px 20px;
+    border-radius: 30px;
+    border: 4px solid white;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-card .icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.menu-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2d3436;
+}
+
+.menu-card p {
+    font-size: 0.9rem;
+    color: #636e72;
+    margin-top: 10px;
+}
+
+/* Hover Effects */
+.menu-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+}
+
+/* Card Themes */
+.materi:hover { border-color: var(--primary); }
+.video:hover { border-color: var(--danger); }
+.game:hover { border-color: var(--success); }
+.soal:hover { border-color: var(--warning); }
+
+footer p {
+    color: #636e72;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Responsif Mobile */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2.5rem; }
+    .menu-grid { grid-template-columns: 1fr; }
+}

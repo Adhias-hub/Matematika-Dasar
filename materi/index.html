@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathPlay - Materi Pengolahan Data</title>
+    <link rel="stylesheet" href="soal.css?v=1.1">
+    <style>
+        .materi-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .materi-section {
+            margin-bottom: 25px;
+            border-bottom: 2px dashed #eee;
+            padding-bottom: 15px;
+        }
+
+        .materi-section:last-child { border: none; }
+
+        .highlight-box {
+            background: #f0fff4;
+            border-left: 5px solid var(--primary);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .turus-example {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        h3 { color: var(--secondary); margin-top: 0; }
+        p { line-height: 1.6; color: var(--text-dark); }
+        
+        .btn-action {
+            display: block;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <h2 id="judul-halaman">📖 Materi Belajar</h2>
+    </header>
+
+    <div class="materi-container">
+        <div class="materi-section">
+            <h3>1. Apa itu Data?</h3>
+            <p>Data adalah kumpulan keterangan atau informasi yang benar dan nyata. Contohnya: data tinggi badan siswa, data jumlah buah di lemari, atau data nilai ulangan.</p>
+        </div>
+
+        <div class="materi-section">
+            <h3>2. Tabel Frekuensi</h3>
+            <p>Cara paling mudah merapikan data yang acak adalah dengan <strong>Tabel</strong>. Tabel terdiri dari baris dan kolom agar informasi mudah dibaca.</p>
+            <div class="highlight-box">
+                <strong>Tips:</strong> Urutkan data dari yang terkecil ke terbesar agar tidak ada yang terlewat!
+            </div>
+        </div>
+
+        <div class="materi-section">
+            <h3>3. Apa itu Turus?</h3>
+            <p>Turus adalah simbol garis lurus untuk menghitung jumlah data. Biasanya setiap 5 data, garis kelimanya dibuat miring untuk memudahkan hitungan.</p>
+            <ul>
+                <li>Angka 1: <span class="turus-example">|</span></li>
+                <li>Angka 3: <span class="turus-example">|||</span></li>
+                <li>Angka 5: <span class="turus-example">||||/</span></li>
+            </ul>
+        </div>
+
+        <div class="materi-section">
+            <h3>4. Membaca Data</h3>
+            <p>Saat membaca tabel atau diagram, perhatikan:</p>
+            <ul>
+                <li><strong>Modus:</strong> Data yang paling sering muncul (paling banyak).</li>
+                <li><strong>Nilai Tertinggi & Terendah:</strong> Angka paling besar dan kecil dalam data.</li>
+                <li><strong>Selisih:</strong> Hasil pengurangan angka besar dengan angka kecil.</li>
+            </ul>
+        </div>
+
+        <a href="../video/" class="btn-action" style="background: var(--secondary);">Nonton Video Penjelasan 📺</a>
+        <a href="../soal/" class="btn-action">Coba Latihan Soal 🔥</a>
+    </div>
+</div>
+
+
+<div class="header-logos" style="
+    position: absolute; 
+    top: 15px; 
+    right: 20px; 
+    display: flex; 
+    gap: 15px; 
+    z-index: 9999;
+">
+    <img src="upi.png" alt="Logo UPI" style="
+        height: 60px; 
+        width: auto; 
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    ">
+    <img src="pgsd.png" alt="Logo PGSD" style="
+        height: 60px; 
+        width: auto; 
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    ">
+</div>
+
+<!-- Tambahkan CSS ini di bagian <style> agar teks H1 tidak tertimpa -->
+<style>
+    body {
+        padding-top: 80px; /* Memberi ruang agar H1 tidak tertutup logo */
+    }
+    
+    @media (max-width: 600px) {
+        .header-logos img {
+            height: 45px; /* Sedikit lebih kecil jika di layar HP */
+        }
+    }
+</style>
+
+<!-- Tombol Kembali Absolut di Kiri -->
+<a href="../" class="btn-back" style="
+    position: absolute; 
+    top: 15px; 
+    left: 20px; 
+    z-index: 9999;
+    text-decoration: none;
+    background: white;
+    color: #00b894;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border: 2px solid #eee;
+">
+    <span>⬅</span> Kembali
+</a>
+
+<!-- Update Style dikit biar tombolnya responsif juga -->
+<style>
+    .btn-back:hover {
+        background: #00b894;
+        color: white;
+        transform: scale(1.05);
+        border-color: #00b894;
+    }
+
+    @media (max-width: 600px) {
+        .btn-back {
+            padding: 8px 12px;
+            font-size: 0.8rem;
+            top: 20px; /* Sesuaikan biar sejajar sama logo kecil di HP */
+        }
+    }
+</style>
+
+</body>
+</html>

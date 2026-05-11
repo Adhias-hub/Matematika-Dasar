@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game 2: Sortir Bangun Datar</title>
+    <link rel="stylesheet" href="game2.css">
+</head>
+<body>
+
+  <div id="game-screen">
+    <!-- Header Terintegrasi (Tombol Kembali + Skor) -->
+    <div class="top-nav">
+        <button onclick="window.location.href='../game/'" class="btn-back-nav">⬅ Kembali</button>
+        <div class="header-info">
+            <h2>Sortir Bangun Datar</h2>
+            <div id="score-board">Skor: <span id="score">0</span></div>
+        </div>
+        <div style="width: 100px;"></div> <!-- Penyeimbang agar judul tetap di tengah -->
+    </div>
+
+    <!-- Kotak Drop -->
+    <div class="drop-zone top-left" data-shape="lingkaran">
+        <span>LINGKARAN</span>
+        <div class="shape-guide circle"></div>
+    </div>
+    <div class="drop-zone top-right" data-shape="persegi">
+        <span>PERSEGI</span>
+        <div class="shape-guide square"></div>
+    </div>
+    <div class="drop-zone bottom-left" data-shape="segitiga">
+        <span>SEGITIGA</span>
+        <div class="shape-guide triangle"></div>
+    </div>
+    <div class="drop-zone bottom-right" data-shape="persegi-panjang">
+        <span>P. PANJANG</span>
+        <div class="shape-guide rect"></div>
+    </div>
+
+    <!-- Area Muncul Benda -->
+    <div id="item-spawner"></div>
+
+    <!-- Tong Sampah -->
+    <div id="trash-bin" data-shape="none">
+        <span>🗑️</span>
+        <p>BUANG</p>
+    </div>
+</div>
+
+<!-- Celebration Tetap Sama -->
+<div id="celebration" class="hidden">
+    <div class="celeb-content">
+        <h1>🎊 JUARA SORTIR! 🎊</h1>
+        <p>Kamu hebat membedakan bentuk!</p>
+        <button onclick="closeCeleb()" class="btn-main">MAIN LAGI!</button>
+    </div>
+</div>
+
+    <script src="game2.js"></script>
+</body>
+</html>

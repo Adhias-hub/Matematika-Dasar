@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Mulut Boli</title>
+    <link rel="stylesheet" href="game1.css?v=1.1">
+</head>
+<body>
+    
+    <div class="game-container">
+        <header>
+            <div class="score-board">Skor: <span id="skor">0</span></div>
+            <div class="nav-footer">
+    <button onclick="window.location.href='../game/'" class="btn-peta">
+        <span class="icon-map">🗺️</span>
+        JELAJAH PETA
+    </button>
+</div>
+
+        </header>
+
+        <!-- Area Visual Buaya -->
+        <div class="stage">
+           <div class="boli-wrapper">
+             <div class="mulut-atas">
+              <!-- Pindahin mata ke sini biar "nyerap" gerakan mulut -->
+             <div class="mata"></div>
+           </div>
+          <div class="mulut-bawah"></div>
+       </div>
+            <h2 id="instruksi">Sudut apakah ini?</h2>
+        </div>
+
+        <!-- Tombol Jawaban -->
+        <div class="answer-box">
+            <button class="btn-ans" onclick="cekJawaban('lancip')">Lancip</button>
+            <button class="btn-ans" onclick="cekJawaban('siku-siku')">Siku-siku</button>
+            <button class="btn-ans" onclick="cekJawaban('tumpul')">Tumpul</button>
+        </div>
+    </div>
+    
+</body>
+
+ <script src="game1.js"></script>
+</html>

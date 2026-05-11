@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game 3: Master Turus</title>
+    <link rel="stylesheet" href="game3.css">
+</head>
+<body>
+    <div id="game-wrapper">
+        <div class="header">
+            <div class="stat-card">TARGET: <span id="target-number">0</span></div>
+            <div class="stat-card">SKOR: <span id="score">0</span></div>
+        </div>
+
+        <div class="board">
+            <div id="turus-area"></div>
+        </div>
+
+        <div class="actions">
+            <button id="btn-add" class="btn primary">🥢 TAMBAH</button>
+            <button id="btn-clear" class="btn secondary">🔄 RESET</button>
+            <button id="btn-submit" class="btn success">CEK! ✅</button>
+        </div>
+
+        <button onclick="window.location.href='../game/'" class="btn-peta">🗺️ Ke Peta</button>
+    </div>
+
+    <!-- Modal Heboh -->
+    <div id="celebration" class="hidden">
+        <div class="celeb-content">
+            <h1>🎊 LUAR BIASA! 🎊</h1>
+            <p>SKOR 100 TEMBUS! KAMU RAJA MATEMATIKA!</p>
+            <button onclick="closeCeleb()" class="btn">GAS LAGI!</button>
+        </div>
+    </div>
+
+    <script src="game3.js"></script>
+</body>
+</html>

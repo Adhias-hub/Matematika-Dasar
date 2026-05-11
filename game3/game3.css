@@ -1,0 +1,69 @@
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --lidi-color: #38bdf8;
+    --lidi-coret: #f43f5e;
+}
+
+body {
+    margin: 0; background: var(--bg); color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex; justify-content: center; align-items: center; height: 100vh;
+}
+
+#game-wrapper { text-align: center; width: 90%; max-width: 500px; }
+
+.header { display: flex; justify-content: space-between; margin-bottom: 20px; }
+.stat-card {
+    background: var(--card); padding: 15px; border-radius: 12px;
+    font-size: 1.2rem; font-weight: bold; border-bottom: 4px solid #334155;
+}
+
+.board {
+    background: var(--card); min-height: 250px; border-radius: 20px;
+    padding: 30px; display: flex; align-items: center; justify-content: center;
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.5); margin-bottom: 25px;
+}
+
+#turus-area { display: flex; flex-wrap: wrap; gap: 12px; width: 100%; }
+
+/* Styling Lidi */
+.lidi {
+    width: 7px; height: 50px; background: var(--lidi-color);
+    border-radius: 10px; box-shadow: 0 0 8px var(--lidi-color);
+    animation: bounceIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lidi.miring {
+    transform: rotate(-45deg) translate(-25px, 12px);
+    background: var(--lidi-coret); box-shadow: 0 0 8px var(--lidi-coret);
+    margin-right: 10px;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.btn {
+    padding: 15px; border: none; border-radius: 10px; cursor: pointer;
+    font-weight: bold; transition: 0.2s;
+}
+.btn.primary { background: #0ea5e9; color: white; grid-column: span 2; font-size: 1.2rem; }
+.btn.success { background: #10b981; color: white; }
+.btn.secondary { background: #64748b; color: white; }
+.btn:active { transform: scale(0.95); }
+
+/* Efek Heboh */
+#celebration {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9); z-index: 999; display: flex; align-items: center; justify-content: center;
+}
+.celeb-content { animation: disco 0.5s infinite; padding: 40px; border-radius: 20px; text-align: center; }
+@keyframes disco {
+    0% { background: #f43f5e; } 50% { background: #8b5cf6; } 100% { background: #10b981; }
+}
+.hidden { display: none !important; }
+.btn-peta { margin-top: 20px; background: none; border: 1px solid #475569; color: #94a3b8; cursor: pointer; }
+
