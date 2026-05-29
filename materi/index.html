@@ -6,6 +6,13 @@
     <title>MathPlay - Materi Pengolahan Data</title>
     <link rel="stylesheet" href="soal.css?v=1.1">
     <style>
+        body {
+            padding-top: 80px; /* Memberi ruang agar header tidak tertutup logo */
+            background-color: #f7f9fc;
+            margin: 0;
+            padding-bottom: 40px;
+        }
+
         .materi-container {
             max-width: 600px;
             margin: 20px auto;
@@ -25,7 +32,7 @@
 
         .highlight-box {
             background: #f0fff4;
-            border-left: 5px solid var(--primary);
+            border-left: 5px solid var(--primary, #00b894);
             padding: 15px;
             border-radius: 10px;
             margin: 10px 0;
@@ -39,101 +46,67 @@
             border-radius: 4px;
         }
 
-        h3 { color: var(--secondary); margin-top: 0; }
-        p { line-height: 1.6; color: var(--text-dark); }
+        h3 { color: var(--secondary, #6c5ce7); margin-top: 0; }
+        p { line-height: 1.6; color: var(--text-dark, #2d3436); }
         
         .btn-action {
             display: block;
             text-align: center;
-            background: var(--primary);
+            background: var(--primary, #00b894);
             color: white;
             text-decoration: none;
             padding: 15px;
             border-radius: 15px;
             font-weight: bold;
             margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            background: #00b894;
+            color: white;
+            transform: scale(1.05);
+            border-color: #00b894;
+        }
+
+        /* Footer Kredensial Buku & Hak Cipta */
+        .book-credits-footer {
+            max-width: 600px;
+            margin: 30px auto 10px auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #6c757d;
+            line-height: 1.5;
+        }
+        
+        .book-credits-footer h4 {
+            margin-top: 0;
+            color: #495057;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 5px;
+        }
+
+        .book-credits-footer ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            .header-logos img {
+                height: 45px; /* Sedikit lebih kecil jika di layar HP */
+            }
+            .btn-back {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+                top: 20px; /* Sesuaikan biar sejajar sama logo kecil di HP */
+            }
         }
     </style>
 </head>
 <body>
-
-<div class="app-container">
-    <header>
-        <h2 id="judul-halaman">📖 Materi Belajar</h2>
-    </header>
-
-    <div class="materi-container">
-        <div class="materi-section">
-            <h3>1. Apa itu Data?</h3>
-            <p>Data adalah kumpulan keterangan atau informasi yang benar dan nyata. Contohnya: data tinggi badan siswa, data jumlah buah di lemari, atau data nilai ulangan.</p>
-        </div>
-
-        <div class="materi-section">
-            <h3>2. Tabel Frekuensi</h3>
-            <p>Cara paling mudah merapikan data yang acak adalah dengan <strong>Tabel</strong>. Tabel terdiri dari baris dan kolom agar informasi mudah dibaca.</p>
-            <div class="highlight-box">
-                <strong>Tips:</strong> Urutkan data dari yang terkecil ke terbesar agar tidak ada yang terlewat!
-            </div>
-        </div>
-
-        <div class="materi-section">
-            <h3>3. Apa itu Turus?</h3>
-            <p>Turus adalah simbol garis lurus untuk menghitung jumlah data. Biasanya setiap 5 data, garis kelimanya dibuat miring untuk memudahkan hitungan.</p>
-            <ul>
-                <li>Angka 1: <span class="turus-example">|</span></li>
-                <li>Angka 3: <span class="turus-example">|||</span></li>
-                <li>Angka 5: <span class="turus-example">||||/</span></li>
-            </ul>
-        </div>
-
-        <div class="materi-section">
-            <h3>4. Membaca Data</h3>
-            <p>Saat membaca tabel atau diagram, perhatikan:</p>
-            <ul>
-                <li><strong>Modus:</strong> Data yang paling sering muncul (paling banyak).</li>
-                <li><strong>Nilai Tertinggi & Terendah:</strong> Angka paling besar dan kecil dalam data.</li>
-                <li><strong>Selisih:</strong> Hasil pengurangan angka besar dengan angka kecil.</li>
-            </ul>
-        </div>
-
-        <a href="../video/" class="btn-action" style="background: var(--secondary);">Nonton Video Penjelasan 📺</a>
-        <a href="../soal/" class="btn-action">Coba Latihan Soal 🔥</a>
-    </div>
-</div>
-
-
-<div class="header-logos" style="
-    position: absolute; 
-    top: 15px; 
-    right: 20px; 
-    display: flex; 
-    gap: 15px; 
-    z-index: 9999;
-">
-    <img src="upi.png" alt="Logo UPI" style="
-        height: 60px; 
-        width: auto; 
-        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
-    ">
-    <img src="pgsd.png" alt="Logo PGSD" style="
-        height: 60px; 
-        width: auto; 
-        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
-    ">
-</div>
-
-<!-- Tambahkan CSS ini di bagian <style> agar teks H1 tidak tertimpa -->
-<style>
-    body {
-        padding-top: 80px; /* Memberi ruang agar H1 tidak tertutup logo */
-    }
-    
-    @media (max-width: 600px) {
-        .header-logos img {
-            height: 45px; /* Sedikit lebih kecil jika di layar HP */
-        }
-    }
-</style>
 
 <!-- Tombol Kembali Absolut di Kiri -->
 <a href="../" class="btn-back" style="
@@ -157,23 +130,97 @@
     <span>⬅</span> Kembali
 </a>
 
-<!-- Update Style dikit biar tombolnya responsif juga -->
-<style>
-    .btn-back:hover {
-        background: #00b894;
-        color: white;
-        transform: scale(1.05);
-        border-color: #00b894;
-    }
+<!-- Logo Instansi di Kanan -->
+<div class="header-logos" style="
+    position: absolute; 
+    top: 15px; 
+    right: 20px; 
+    display: flex; 
+    gap: 15px; 
+    z-index: 9999;
+">
+    <img src="upi.png" alt="Logo UPI" style="
+        height: 60px; 
+        width: auto; 
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    ">
+    <img src="pgsd.png" alt="Logo PGSD" style="
+        height: 60px; 
+        width: auto; 
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    ">
+</div>
 
-    @media (max-width: 600px) {
-        .btn-back {
-            padding: 8px 12px;
-            font-size: 0.8rem;
-            top: 20px; /* Sesuaikan biar sejajar sama logo kecil di HP */
-        }
-    }
-</style>
+<div class="app-container">
+    <header>
+        <h2 id="judul-halaman" style="text-align: center; margin-bottom: 30px;">Base Pembelajaran</h2>
+    </header>
+
+    <div class="materi-container">
+        <div class="materi-section">
+            <h3>1. Apa itu Data?</h3>
+            <p>Data adalah kumpulan keterangan atau informasi yang benar dan nyata dari suatu keadaan atau objek di sekitar kita. Contohnya: catatan tinggi badan siswa kelas IV, jumlah buah di lemari, atau data nilai ulangan matematika.</p>
+        </div>
+
+        <div class="materi-section">
+            <h3>2. Tabel Frekuensi</h3>
+            <p>Cara paling mudah untuk menyusun data acak yang diperoleh dari lapangan adalah menggunakan <strong>Tabel</strong>. Tabel terdiri dari baris dan kolom yang mengelompokkan data tiap kategori agar informasi menjadi rapi dan mudah dibaca.</p>
+            <div class="highlight-box">
+                <strong>Tips Berdasarkan Buku Paket:</strong> Selalu urutkan jenis data terlebih dahulu agar proses penghitungan jumlah atau frekuensi tidak ada yang terlewat!
+            </div>
+        </div>
+
+        <div class="materi-section">
+            <h3>3. Apa itu Turus?</h3>
+            <p>Turus (atau dikenal sebagai <em>tally mark</em>) adalah simbol berbentuk garis lurus untuk mencatat data secara langsung di lapangan agar tidak mudah keliru. Setiap 1 data diwakili 1 garis tegak, dan setiap kelipatan 5 data, garis kelimanya dibuat miring menyilang untuk mengikat data tersebut agar menghitungnya lebih cepat.</p>
+            <ul>
+                <li>Angka 1 diwakili: <span class="turus-example">|</span></li>
+                <li>Angka 3 diwakili: <span class="turus-example">|||</span></li>
+                <li>Angka 5 diwakili (Satu Ikat): <span class="turus-example">||||/</span></li>
+            </ul>
+        </div>
+
+        <div class="materi-section">
+            <h3>4. Menyajikan Data Visual (Piktogram & Diagram Batang)</h3>
+            <p>Selain tabel, data dapat disajikan dalam bentuk grafis visual sesuai standar Kurikulum Merdeka:</p>
+            <ul>
+                <li><strong>Piktogram (Diagram Gambar):</strong> Penyajian data yang menggunakan simbol gambar tertentu untuk menunjukkan banyak data dengan batasan skala satu satuan.</li>
+                <li><strong>Diagram Batang:</strong> Penyajian data menggunakan bentuk persegi panjang (batang) untuk membandingkan jumlah tiap kategori. Diagram ini dapat disajikan dalam bentuk <strong>Tegak</strong> (vertikal) maupun bentuk <strong>Mendatar</strong> (horizontal).</li>
+            </ul>
+        </div>
+
+        <div class="materi-section">
+            <h3>5. Analisis dan Interpretasi Data</h3>
+            <p>Saat membaca hasil akhir dari sebuah piktogram atau diagram batang, pastikan kalian fokus mencari tiga informasi utama kurikulum berikut:</p>
+            <ul>
+                <li><strong>Data Terbesar (Modus):</strong> Kategori data yang jumlahnya paling banyak atau paling sering muncul.</li>
+                <li><strong>Data Terkecil:</strong> Kategori data yang jumlahnya paling sedikit.</li>
+                <li><strong>Jumlah Keseluruhan:</strong> Hasil total penjumlahan data dari semua kategori yang disajikan.</li>
+            </ul>
+        </div>
+
+        <a href="../video/" class="btn-action" style="background: var(--secondary, #6c5ce7);">Nonton Video Penjelasan 📺</a>
+        <a href="../soal/" class="btn-action">Coba Latihan Soal 🔥</a>
+    </div>
+
+    <!-- Bagian Hak Cipta & Informasi Buku Paket Resmi Resmi Masuk Sini -->
+    <footer class="book-credits-footer">
+        <h4>© Hak Cipta & Informasi Sumber:</h4>
+        <p><strong>Hak Cipta pada Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia. Dilindungi Undang-Undang.</strong></p>
+        
+        <p><em>Disclaimer:</em> Buku ini disiapkan oleh Pemerintah dalam rangka pemenuhan kebutuhan buku pendidikan yang bermutu, murah, dan merata sesuai dengan amanat dalam UU No. 3 Tahun 2017. Buku ini merupakan dokumen hidup yang senantiasa diperbaiki, diperbarui, dan dimutakhirkan sesuai dengan dinamika kebutuhan dan perubahan zaman.</p>
+        
+        <p><strong>Referensi Buku Utama:</strong><br>
+        Buku Panduan Guru Matematika untuk SD/MI Kelas IV (Cetakan Pertama, 2022).<br>
+        ISBN 978-602-244-874-7 (no.jil.lengkap) | ISBN 978-602-244-909-6 (jil.4)</p>
+        
+        <ul>
+            <li><strong>Penulis:</strong> Hobri, Susanto, Arika Indah Kristiana, Arif Fatahillah, Eko Waluyo, Ridho Alfarisi, Haris Setya Budi, Moh. Iqbal Helmi.</li>
+            <li><strong>Penelaah:</strong> Widowati, Ali Mahmudi.</li>
+            <li><strong>Penerbit:</strong> Pusat Perbukuan, Badan Standar, Kurikulum, dan Asesmen Pendidikan, Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi.</li>
+        </ul>
+    </footer>
+</div>
 
 </body>
 </html>
